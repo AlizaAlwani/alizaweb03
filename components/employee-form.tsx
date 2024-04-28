@@ -15,6 +15,7 @@ import {
 import { Input } from "@/components/ui/input"
 
 import { EmployeeSchema } from "@/schemas";
+import { createEmployee } from "@/actions/createEmployee";
 
 export const Employeeform = () => {
     const form = useForm<z.infer<typeof EmployeeSchema>>({
@@ -28,7 +29,8 @@ export const Employeeform = () => {
       })
      
       function onSubmit(values: z.infer<typeof EmployeeSchema>) {
-        console.log(values)
+        // console.log(values)
+        createEmployee(values);
       }
   return (
     <Form {...form}>
@@ -85,7 +87,7 @@ export const Employeeform = () => {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" className="ml-[90px]">Submit</Button>
       </form>
     </Form>
   )

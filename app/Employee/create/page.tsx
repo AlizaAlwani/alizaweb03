@@ -5,9 +5,9 @@ import React from 'react'
 
  export const EmployeeCreatePage = () => {
   return (
-    <div className='flex justify-center items-center mt-[40px]'>
+    <div className='flex justify-center items-center mt-[80px]'>
     
-      <Formwrapper title="Create a new employee">
+      <Formwrapper title="Create a New Employee">
         <Employeeform />
       </Formwrapper>
       </div>
